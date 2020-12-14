@@ -1,0 +1,31 @@
+{
+  "name": "raticord",
+  "version": "0.0.1",
+  "description": "communication for truth",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+	"jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js",
+	"start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gummygamer/raticord_server.git"
+  },
+  "keywords": [
+    "chat",
+    "rest"
+  ],
+  "author": "Ga1ahad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gummygamer/raticord_server/issues"
+  },
+  "homepage": "https://github.com/Gummygamer/raticord_server#readme"
+}
