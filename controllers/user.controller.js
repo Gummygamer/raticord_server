@@ -1,3 +1,8 @@
+const User = require("../models/user.model.js");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+
+
 exports.register = async (req, res) => {
     
     //Hash password
@@ -32,7 +37,7 @@ exports.login = async (req, res) => {
             if (!validPass) return res.status(400).send("Username or password is wrong");
 
             // Create and assign token
-            const token = jwt.sign({id: user.id, user_type_id: user.user_type_id}, config.TOKEN_SECRET);
+            const token = jwt.sign({id: user.id}, process.env.TOKEN_SECRET);
             res.header("auth-token", token).send({"token": token});
             // res.send("Logged IN");
         }
